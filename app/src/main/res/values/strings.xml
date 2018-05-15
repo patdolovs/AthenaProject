@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Athena</string>
+    <string name="test_string">Gagarin el diablo!</string>
+    <string name="signed_in_fmt">Uspjesan login.</string>
+    <string name="client_id" tools:ignore="TypographyDashes">618010952150-6btgbdnear1uj7n3qih4ciu32k9ltov4.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">553651604975742</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">2bRKE8kwVKUHebLK0WQoaeQhr</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">V4S9wcDFQAe3Q0Wi6WcqlS5PC3QRcrClkBbpXnH9j81eRdIfQ5</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

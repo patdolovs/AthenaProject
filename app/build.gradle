@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "team.athena"
+        minSdkVersion 23
+        targetSdkVersion 26
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    // Include all the Twitter APIs
+    compile 'com.twitter.sdk.android:twitter:3.1.1'
+    //Baca error zbog Facebook SDK (on ovisi o appcompat-v7.25*)
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    //Firebase
+    compile 'com.google.firebase:firebase-core:11.4.2'
+    compile 'com.google.firebase:firebase-auth:11.4.2'
+    compile 'com.google.firebase:firebase-firestore:11.4.2'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile 'com.google.android.gms:play-services-auth:11.4.2'
+    //Facebook SDK
+    compile 'com.facebook.android:facebook-android-sdk:4.20.0'
+    testCompile 'junit:junit:4.12'
+    //Multidex - više od 64K metoda
+    compile 'com.android.support:multidex:1.0.1'
+    // Optional -- Mockito framework
+    testCompile 'org.mockito:mockito-core:1.10.19'
+    //Volley - Wifi
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    //Patrik Chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    compile 'com.intuit.sdp:sdp-android:1.0.5'
+}
+apply plugin: 'com.google.gms.google-services'
